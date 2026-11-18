@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090910"><meta name="description" content="MOONVEIL AI STUDIO — cinematic AI video creation studio.">
+  <link rel="manifest" href="/manifest.webmanifest"><link rel="stylesheet" href="/styles.css">
+  <title>MOONVEIL AI STUDIO</title>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="moon">◐</span> MOONVEIL <small>AI STUDIO</small></a><nav><a href="#create">Create</a><a href="#pricing">Credits</a><a href="#history">My videos</a></nav><div class="account"><span id="creditCount">0 credits</span><button id="authBtn" class="outline">Sign in</button></div></header>
+<main>
+<section class="hero"><div class="eyebrow">YOUR PERSONAL CINEMATIC WORKSPACE</div><h1>Turn your imagination<br><em>into motion.</em></h1><p>Create cinematic videos from text or images. Built for creators, filmmakers and storytellers.</p><a class="primary" href="#create">Start creating <b>→</b></a><div class="hero-glow"></div></section>
+<section id="create" class="workspace">
+  <div class="section-head"><div><div class="eyebrow">AI VIDEO GENERATOR</div><h2>Create a video</h2></div><span class="pill">CLOUD GENERATION</span></div>
+  <div class="tabs"><button class="tab active" data-mode="text">Text to video</button><button class="tab" data-mode="image">Image to video</button></div>
+  <label for="prompt">Describe your scene</label><textarea id="prompt" rows="4" placeholder="A lone figure walks through a fog-covered corridor, cinematic slow tracking shot, dramatic moonlight..."></textarea>
+  <div class="options"><div><label for="style">Visual style</label><select id="style"><option>Cinematic</option><option>Horror</option><option>Realistic</option><option>Fantasy</option><option>Science fiction</option><option>Commercial</option></select></div><div><label for="ratio">Aspect ratio</label><select id="ratio"><option>16:9 Landscape</option><option>9:16 Portrait</option><option>1:1 Square</option></select></div><div><label for="duration">Duration</label><select id="duration"><option>5 seconds</option><option>10 seconds</option></select></div></div>
+  <div id="imageInput" class="upload hidden"><label for="reference">Reference image</label><input id="reference" type="file" accept="image/*"><p>Image-to-video requires an image and a connected video-generation provider.</p></div>
+  <button id="generateBtn" class="primary wide">Generate video <span>→</span></button>
+  <p id="notice" class="notice">Demo interface: connect Supabase, a video API and payment provider before accepting real users or charging credits.</p>
+  <div id="result" class="result hidden"></div>
+</section>
+<section id="pricing" class="lower"><div><div class="eyebrow">CREDIT WALLET</div><h2>Pay for what you create.</h2><p>Credit packages can be configured after payment processing is connected.</p></div><div class="price-card"><h3>Creator credits</h3><p>Starter package placeholder</p><strong>Set your price</strong><button class="outline" id="buyBtn">Configure payments</button></div></section>
+<section id="history" class="history"><div class="eyebrow">YOUR WORKSPACE</div><h2>Recent creations</h2><p>Your generated videos will appear here after account and database setup.</p></section>
+</main>
+<footer>MOONVEIL AI STUDIO <span>© 2026 · Create beyond the ordinary.</span></footer>
+<div id="authModal" class="modal hidden"><div class="modal-card"><button id="closeModal" class="close">×</button><div class="eyebrow">MEMBER ACCESS</div><h2>Welcome to Moonveil</h2><p>Account registration will be enabled after Supabase configuration.</p><input placeholder="Email address" type="email" disabled><input placeholder="Password" type="password" disabled><button class="primary wide" disabled>Sign in / Register</button></div></div>
+<script src="/app.js"></script>
+</body></html>
